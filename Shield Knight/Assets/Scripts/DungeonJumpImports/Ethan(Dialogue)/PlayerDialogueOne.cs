@@ -99,7 +99,7 @@ public class PlayerDialogueOne : Dialogue
     private void CheckEnv()
     {
         // when the quest item is got and the ending dialogue has not been triggered
-        if (PlayerManagerTmp.instance.QuestItemIsCollected(questItem) && !questEnd)
+        if (PlayerManager.instance.QuestItemIsCollected(questItem) && !questEnd)
         {
             Debug.Log("Quest complete Dialogue");
             dialogueID = 2;

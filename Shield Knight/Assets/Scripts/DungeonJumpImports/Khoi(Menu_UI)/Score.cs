@@ -10,12 +10,12 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText.text = string.Format("Score: {0}", PlayerManagerTmp.instance.GetPlayerScore().ToString());
+        scoreText.text = string.Format("Score: {0}", PlayerManager.instance.GetPlayerScore().ToString());
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = string.Format("Score: {0}", PlayerManagerTmp.instance.GetPlayerScore().ToString());
+        scoreText.text = string.Format("Score: {0}", PlayerManager.instance.GetPlayerScore().ToString());
     }
 }

@@ -224,12 +224,12 @@ public class PlatformLevelManager : MonoBehaviour
 		*/
 	private void CheckPlayerHealth()
 	{
-		if (PlayerManagerTmp.instance.GetPlayerHealth() == 0)
+		if (PlayerManager.instance.GetPlayerHealth() == 0)
 		{
 			// reset player position and health
 			player.transform.position = spawnPnt.position;
-			PlayerManagerTmp.instance.UpdatePlayerHealth(1);
-			PlayerManagerTmp.instance.UpdatePlayerScore(-500);
+			PlayerManager.instance.UpdatePlayerHealth(1);
+			PlayerManager.instance.UpdatePlayerScore(-500);
 		}
 	}
 }

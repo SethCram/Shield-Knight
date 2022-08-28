@@ -11,7 +11,7 @@ public class MiscItemDisplay : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        if(PlayerManagerTmp.instance.MiscItemIsCollected(itemName))
+        if(PlayerManager.instance.MiscItemIsCollected(itemName))
         {
             item.enabled = true;
         }
@@ -24,7 +24,7 @@ public class MiscItemDisplay : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(PlayerManagerTmp.instance.MiscItemIsCollected(itemName))
+        if(PlayerManager.instance.MiscItemIsCollected(itemName))
         {
             item.enabled = true;
         }

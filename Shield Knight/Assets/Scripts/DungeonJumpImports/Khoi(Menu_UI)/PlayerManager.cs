@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManagerTmp : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
-	public static PlayerManagerTmp instance { get; private set; }
+	public static PlayerManager instance { get; private set; }
 
 	private int playerScore;
 	private LinkedList<string> questItems, miscItems;

@@ -29,8 +29,8 @@ public class LightBandit : MonoBehaviour {
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Bandit>();
-        damage = PlayerManagerTmp.instance.GetPlayerHealth();
-        damageTmp = PlayerManagerTmp.instance.GetPlayerHealth();
+        damage = PlayerManager.instance.GetPlayerHealth();
+        damageTmp = PlayerManager.instance.GetPlayerHealth();
     }
 	
 	// Update is called once per frame
@@ -75,7 +75,7 @@ public class LightBandit : MonoBehaviour {
             
         //Hurt
         damageTmp = damage;
-        damage = PlayerManagerTmp.instance.GetPlayerHealth();
+        damage = PlayerManager.instance.GetPlayerHealth();
         if (damage - damageTmp != 0.0)
         {
             m_animator.SetTrigger("Hurt");

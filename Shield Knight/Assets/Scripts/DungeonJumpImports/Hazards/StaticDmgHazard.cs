@@ -111,7 +111,7 @@ public class StaticDmgHazard : Hazard
         }
 
         //dmg player:
-        PlayerManagerTmp.instance.UpdatePlayerHealth(dmg);
+        PlayerManager.instance.UpdatePlayerHealth(dmg);
     
         print("Damage Player " + dmg);
 

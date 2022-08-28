@@ -11,7 +11,7 @@ public class MiscItemObtained : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            PlayerManagerTmp.instance.AddMiscItem(itemName);
+            PlayerManager.instance.AddMiscItem(itemName);
             PlayMiscItemSound();
         }
     }

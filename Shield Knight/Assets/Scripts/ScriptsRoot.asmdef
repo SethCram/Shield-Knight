@@ -3,8 +3,7 @@
     "rootNamespace": "",
     "references": [
         "Unity.TextMeshPro",
-        "AstarPathfindingProject",
-        ""
+        "AstarPathfindingProject"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

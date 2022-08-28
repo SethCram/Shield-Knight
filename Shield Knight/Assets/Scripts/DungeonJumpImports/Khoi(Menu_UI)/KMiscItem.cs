@@ -22,7 +22,7 @@ public class KMiscItem : MonoBehaviour
     {
         Debug.Log("This is a miscellaneous item");
         KPickupInterface baseItem = new KPickup();
-        if (PlayerManagerTmp.instance.GetPlayerScore() < 1000)
+        if (PlayerManager.instance.GetPlayerScore() < 1000)
         {
             Debug.Log(string.Format("Speed bonus obtained: {0}", baseItem.GetSpeedBonus()));
         }

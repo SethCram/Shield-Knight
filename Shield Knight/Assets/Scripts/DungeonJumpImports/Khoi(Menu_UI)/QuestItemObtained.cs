@@ -10,7 +10,7 @@ public class QuestItemObtained : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            PlayerManagerTmp.instance.AddQuestItem(itemName);
+            PlayerManager.instance.AddQuestItem(itemName);
         }
     }
 

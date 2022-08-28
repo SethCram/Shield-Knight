@@ -24,7 +24,7 @@ public class HealthBar : MonoBehaviour
     private void Start()
     {
         fill = GameObject.Find("Fill").GetComponent<Image>();
-        fill.fillAmount = PlayerManagerTmp.instance.GetPlayerHealth();
+        fill.fillAmount = PlayerManager.instance.GetPlayerHealth();
     }
 
     /*
@@ -37,7 +37,7 @@ public class HealthBar : MonoBehaviour
     {
         if (Time.timeScale == 1)
         {
-            fill.fillAmount = PlayerManagerTmp.instance.GetPlayerHealth();
+            fill.fillAmount = PlayerManager.instance.GetPlayerHealth();
         }
     }
 }

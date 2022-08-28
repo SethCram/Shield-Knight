@@ -14,18 +14,18 @@ public class WinScreen : MonoBehaviour
     private void Start()
     {
         winScreen.SetActive(false);
-        scoreText.text = PlayerManagerTmp.instance.GetPlayerScore().ToString();
-        titleText.text = PlayerManagerTmp.instance.GetPlayerTitle();
+        scoreText.text = PlayerManager.instance.GetPlayerScore().ToString();
+        titleText.text = PlayerManager.instance.GetPlayerTitle();
         gameIsOver = false;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        scoreText.text = PlayerManagerTmp.instance.GetPlayerScore().ToString();
-        titleText.text = PlayerManagerTmp.instance.GetPlayerTitle();
+        scoreText.text = PlayerManager.instance.GetPlayerScore().ToString();
+        titleText.text = PlayerManager.instance.GetPlayerTitle();
 
-        if(!gameIsOver && PlayerManagerTmp.instance.GameIsWon())
+        if(!gameIsOver && PlayerManager.instance.GameIsWon())
         {
             gameIsOver = true;
             winScreen.SetActive(true);

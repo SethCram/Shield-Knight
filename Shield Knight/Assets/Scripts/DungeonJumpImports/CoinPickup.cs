@@ -51,7 +51,7 @@ public class CoinPickup : PlatformerItem
     override public void Pickup(Collider2D other)
     {
         FindObjectOfType<AudioManager>().Play("CoinPickup");
-        PlayerManagerTmp.instance.UpdatePlayerScore(100);
+        PlayerManager.instance.UpdatePlayerScore(100);
         Destroy(gameObject);
     }
 }

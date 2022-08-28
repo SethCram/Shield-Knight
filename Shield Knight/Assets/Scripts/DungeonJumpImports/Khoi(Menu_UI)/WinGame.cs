@@ -14,6 +14,6 @@ public class WinGame : MonoBehaviour
 
     public void WinTheGame()
     {
-        PlayerManagerTmp.instance.WinGame();
+        PlayerManager.instance.WinGame();
     }
 }

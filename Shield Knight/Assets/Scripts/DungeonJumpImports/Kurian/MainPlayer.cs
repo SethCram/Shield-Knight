@@ -20,8 +20,8 @@ public class MainPlayer : MonoBehaviour
 	
 	void Start()
 	{
-	    damage = PlayerManagerTmp.instance.GetPlayerHealth();
-	    damageTmp = PlayerManagerTmp.instance.GetPlayerHealth();
+	    damage = PlayerManager.instance.GetPlayerHealth();
+	    damageTmp = PlayerManager.instance.GetPlayerHealth();
 	
 	}
 	// Update is called once per frame
@@ -35,7 +35,7 @@ public class MainPlayer : MonoBehaviour
 		animator.SetFloat("Speed", movement.sqrMagnitude);
 		
 		damageTmp = damage;
-		damage = PlayerManagerTmp.instance.GetPlayerHealth();
+		damage = PlayerManager.instance.GetPlayerHealth();
 		if (damage - damageTmp != 0.0)
 		{
 			dmg = true;

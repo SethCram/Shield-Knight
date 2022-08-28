@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlatformPlayer : MonoBehaviour
 {
-	public float moveSpeed = PlayerManagerTmp.instance.GetPlayerSpeed();
+	public float moveSpeed = PlayerManager.instance.GetPlayerSpeed();
 
 	public Rigidbody2D rb;
 
@@ -19,7 +19,7 @@ public class PlatformPlayer : MonoBehaviour
 
 	//Vars taken from LightBandit
 
-	public float playerJumpForce = PlayerManagerTmp.instance.GetPlayerJump();
+	public float playerJumpForce = PlayerManager.instance.GetPlayerJump();
 	private Sensor_Bandit m_groundSensor;
 	private bool m_grounded = false;
 		//private bool m_combatIdle = false;
@@ -31,8 +31,8 @@ public class PlatformPlayer : MonoBehaviour
 
 	void Start()
 	{
-		damage = PlayerManagerTmp.instance.GetPlayerHealth();
-		damageTmp = PlayerManagerTmp.instance.GetPlayerHealth();
+		damage = PlayerManager.instance.GetPlayerHealth();
+		damageTmp = PlayerManager.instance.GetPlayerHealth();
 		m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Bandit>();
 		playerCollider = GetComponent<BoxCollider2D>();
 		ogColliderOffset = playerCollider.offset;
@@ -101,7 +101,7 @@ public class PlatformPlayer : MonoBehaviour
 		}
 
 		damageTmp = damage;
-		damage = PlayerManagerTmp.instance.GetPlayerHealth();
+		damage = PlayerManager.instance.GetPlayerHealth();
 		if (damage - damageTmp != 0.0)
 		{
 			dmg = true;
@@ -110,8 +110,8 @@ public class PlatformPlayer : MonoBehaviour
 		else dmg = false;
 		animator.SetBool("Dmg", dmg);
 
-		moveSpeed = PlayerManagerTmp.instance.GetPlayerSpeed();
-		playerJumpForce = PlayerManagerTmp.instance.GetPlayerJump();
+		moveSpeed = PlayerManager.instance.GetPlayerSpeed();
+		playerJumpForce = PlayerManager.instance.GetPlayerJump();
 	}
 
 	void FixedUpdate()

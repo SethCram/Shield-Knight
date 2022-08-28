@@ -11,7 +11,7 @@ public class QuestItemDisplay : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        if(PlayerManagerTmp.instance.QuestItemIsCollected(itemName))
+        if(PlayerManager.instance.QuestItemIsCollected(itemName))
         {
             item.enabled = true;
         }
@@ -24,7 +24,7 @@ public class QuestItemDisplay : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(PlayerManagerTmp.instance.QuestItemIsCollected(itemName))
+        if(PlayerManager.instance.QuestItemIsCollected(itemName))
         {
             item.enabled = true;
         }

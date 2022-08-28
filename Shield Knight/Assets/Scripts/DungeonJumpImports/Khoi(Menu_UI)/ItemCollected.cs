@@ -11,7 +11,7 @@ public class ItemCollected : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            PlayerManagerTmp.instance.UpdatePlayerHealth(updateHealth);
+            PlayerManager.instance.UpdatePlayerHealth(updateHealth);
         }
     }
 
